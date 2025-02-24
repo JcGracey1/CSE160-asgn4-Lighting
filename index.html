@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Rocky Terrain</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <p>
+      
+    <p id="numdot"> XXX </p>
+
+
+    <button id="reset">Regenerate</button>
+    <p>
+      Game: Find the block </br>
+      Each time the world is generated, a red block will be randomly placed. Try to find it!</br></br>
+
+      Add and remove blocks:</br>
+      T: Add block</br>
+      R: Remove block</br></br>
+
+      Movement:</br>
+      W: Forward</br>
+      S: Backward</br>
+      A: Left</br>
+      D: Right</br></br>
+      Q: Pan Left</br>
+      E: Pan Right</br>
+      G: Pan Up</br>
+      B: Pan Down</br>
+    <p>
+      Camera Angle <input type="range" id="angleSlide" min="0" max="360" value="15" class="slider">
+    </p>
+    <button id="normalOn">Normals On</button>
+    <button id="normalOff">Normals Off</button> </p>
+    <p>
+      Light X<input type="range" id="lightXSlide" min="-250" max="250" value="0" class="slider">
+      Light Y<input type="range" id="lightYSlide" min="-250" max="250" value="100" class="slider">
+      Light Z<input type="range" id="lightZSlide" min="-250" max="250" value="-200" class="slider">
+    </p>
+
+    <script src="lib/cuon-matrix.js"></script>
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="Point.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Camera.js"></script>
+    <script src="BlockyAnimal.js"></script>
+
+  </body>
+  
+</html>
