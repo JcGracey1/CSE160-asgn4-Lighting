@@ -3,7 +3,7 @@ class Sphere {
     this.type = 'sphere';
     this.color = [1.0, 1.0, 1.0, 1.0];
     this.matrix = new Matrix4();
-    this.textureNum = 0; // default use texture0
+    this.textureNum = -2; // default use texture0
 
     // Create buffers once:
     this.vertBuffer = gl.createBuffer();

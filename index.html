@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Rocky Terrain</title>
+    <title>Lighting</title>
   </head>
 
   <body onload="main()">
@@ -16,10 +16,8 @@
 
 
     <button id="reset">Regenerate</button>
+    <button id="toggleMovement">Toggle Light Movement</button>
     <p>
-      Game: Find the block </br>
-      Each time the world is generated, a red block will be randomly placed. Try to find it!</br></br>
-
       Add and remove blocks:</br>
       T: Add block</br>
       R: Remove block</br></br>
@@ -34,13 +32,23 @@
       G: Pan Up</br>
       B: Pan Down</br>
     <p>
-      Camera Angle <input type="range" id="angleSlide" min="0" max="360" value="15" class="slider">
+      Camera Angle <input type="range" id="angleSlide" min="0" max="360" value="15" class="slider"></p>
+      Light Color <input type="color" id="colorSlide" value="#ffffff">
+
     </p>
     <button id="normalOn">Normals On</button>
     <button id="normalOff">Normals Off</button> </p>
+
+    </p>
+    <button id="LightOn">Light On</button>
+    <button id="LightOff">Light Off</button>
+
+    <p>
+      <button id="toggleSpotlight">Toggle Spotlight</button>
+    </p>
     <p>
       Light X<input type="range" id="lightXSlide" min="-250" max="250" value="0" class="slider">
-      Light Y<input type="range" id="lightYSlide" min="-250" max="250" value="100" class="slider">
+      Light Y<input type="range" id="lightYSlide" min="100" max="500" value="400" class="slider">
       Light Z<input type="range" id="lightZSlide" min="-250" max="250" value="-200" class="slider">
     </p>
 
@@ -48,7 +56,6 @@
     <script src="lib/webgl-utils.js"></script>
     <script src="lib/cuon-utils.js"></script>
     <script src="lib/webgl-debug.js"></script>
-    <script src="Point.js"></script>
     <script src="Triangle.js"></script>
     <script src="Circle.js"></script>
     <script src="Cube.js"></script>
